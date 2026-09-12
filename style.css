@@ -2410,3 +2410,33 @@ section.about-section .about-text p.lead {
     }
 }
 
+
+/* FINAL MOBILE MENU OVERRIDE */
+
+@media (max-width: 700px) {
+    .navigation.active {
+        display: flex !important;
+        position: fixed !important;
+        top: 68px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: calc(100vh - 68px) !important;
+        padding: 35px 5vw !important;
+        background: #f4f1e8 !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        z-index: 9998 !important;
+    }
+
+    .navigation:not(.active) {
+        display: flex !important;
+        transform: translateY(-110%) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}
