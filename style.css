@@ -2440,3 +2440,74 @@ section.about-section .about-text p.lead {
         pointer-events: none !important;
     }
 }
+
+/* ================================
+   LCD LOGO FOLD ANIMATION
+================================ */
+
+.site-header .logo {
+    perspective: 600px;
+}
+
+.site-header .logo-mark {
+    transform-origin: left center;
+    animation: logoFold 4s ease-in-out infinite;
+    will-change: transform;
+}
+
+.site-header .logo-text {
+    display: inline-block;
+    transform-origin: left center;
+    animation: textFold 4s ease-in-out infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes logoFold {
+    0%, 15% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(-80deg);
+    }
+
+    35%, 65% {
+        transform: rotateY(0deg);
+    }
+
+    75% {
+        transform: rotateY(-80deg);
+    }
+
+    85%, 100% {
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes textFold {
+    0%, 20% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+
+    30% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+
+    40%, 65% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+
+    85%, 100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
